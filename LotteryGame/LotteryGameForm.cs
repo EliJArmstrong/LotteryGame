@@ -12,9 +12,15 @@ namespace LotteryGame
 {
     public partial class LotteryGameForm : Form
     {
+        // Holds a list of the winning numbers.
+        List<int> lotteryNumbers = new List<int>();
+        // Holds the user selected numbers.
+        int[] userNumbers = new int[5];
+
         public LotteryGameForm()
         {
             InitializeComponent();
+            fillArrays();
         }
     }
 }

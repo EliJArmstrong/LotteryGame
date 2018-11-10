@@ -46,18 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LotteryGameForm.cs">
+    <Compile Include="Controller\LotteryGameForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LotteryGameForm.Designer.cs">
+    <Compile Include="Controller\LotteryGameForm.Designer.cs">
       <DependentUpon>LotteryGameForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GradientGroup.cs">
+    <Compile Include="View\GradientGroup.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Model\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="LotteryGameForm.resx">
+    <EmbeddedResource Include="Controller\LotteryGameForm.resx">
       <DependentUpon>LotteryGameForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -15,9 +15,9 @@ using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
 // ----------------------------------------------------------------------------
-// The Name Space for FileSizes.
+// The Name Space for LotteryGame.
 // ----------------------------------------------------------------------------
-namespace FileSizes
+namespace LotteryGame
 {
     /// -----------------------------------------------------------------------
     /// <summary>The GradientGroup class with base of GroupBox.</summary>

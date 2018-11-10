@@ -19,6 +19,12 @@
         private System.Collections.Generic.List<System.Windows.Forms.Label>
             errorLbls = new System.Collections.Generic.List<System.Windows.Forms.Label>();
 
+        /// <summary>
+        /// Holds the NumbericUpDowns in the forms.
+        /// </summary>
+        private System.Collections.Generic.List<System.Windows.Forms.NumericUpDown>
+            upAndDowns = new System.Collections.Generic.List<System.Windows.Forms.NumericUpDown>();
+
         
         /// <summary>
         /// Clean up any resources being used.
@@ -41,7 +47,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gradientGroup1 = new FileSizes.GradientGroup();
+            this.gradientGroup1 = new LotteryGame.GradientGroup();
             this.numberPickerBtn = new System.Windows.Forms.Button();
             this.errorLbl5 = new System.Windows.Forms.Label();
             this.errorLbl4 = new System.Windows.Forms.Label();
@@ -110,11 +116,9 @@
             this.gradientGroup1.Controls.Add(this.userNumber2);
             this.gradientGroup1.Controls.Add(this.userNumber1);
             this.gradientGroup1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gradientGroup1.Location = new System.Drawing.Point(-2, -12);
-            this.gradientGroup1.Margin = new System.Windows.Forms.Padding(6);
+            this.gradientGroup1.Location = new System.Drawing.Point(-1, -6);
             this.gradientGroup1.Name = "gradientGroup1";
-            this.gradientGroup1.Padding = new System.Windows.Forms.Padding(6);
-            this.gradientGroup1.Size = new System.Drawing.Size(1608, 881);
+            this.gradientGroup1.Size = new System.Drawing.Size(804, 458);
             this.gradientGroup1.TabIndex = 0;
             this.gradientGroup1.TabStop = false;
             // 
@@ -122,22 +126,21 @@
             // 
             this.numberPickerBtn.BackColor = System.Drawing.Color.Firebrick;
             this.numberPickerBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numberPickerBtn.Location = new System.Drawing.Point(338, 825);
-            this.numberPickerBtn.Margin = new System.Windows.Forms.Padding(6);
+            this.numberPickerBtn.Location = new System.Drawing.Point(169, 429);
             this.numberPickerBtn.Name = "numberPickerBtn";
-            this.numberPickerBtn.Size = new System.Drawing.Size(238, 44);
+            this.numberPickerBtn.Size = new System.Drawing.Size(119, 23);
             this.numberPickerBtn.TabIndex = 32;
             this.numberPickerBtn.Text = "I\'m Feeling Lucky";
             this.numberPickerBtn.UseVisualStyleBackColor = false;
+            this.numberPickerBtn.Click += new System.EventHandler(this.NumberPickerBtn_Click);
             // 
             // errorLbl5
             // 
             this.errorLbl5.AutoSize = true;
             this.errorLbl5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.errorLbl5.Location = new System.Drawing.Point(1094, 521);
-            this.errorLbl5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.errorLbl5.Location = new System.Drawing.Point(547, 271);
             this.errorLbl5.Name = "errorLbl5";
-            this.errorLbl5.Size = new System.Drawing.Size(136, 26);
+            this.errorLbl5.Size = new System.Drawing.Size(74, 13);
             this.errorLbl5.TabIndex = 31;
             this.errorLbl5.Text = "Not Distinct";
             this.errorLbl5.Visible = false;
@@ -146,10 +149,9 @@
             // 
             this.errorLbl4.AutoSize = true;
             this.errorLbl4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.errorLbl4.Location = new System.Drawing.Point(904, 521);
-            this.errorLbl4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.errorLbl4.Location = new System.Drawing.Point(452, 271);
             this.errorLbl4.Name = "errorLbl4";
-            this.errorLbl4.Size = new System.Drawing.Size(136, 26);
+            this.errorLbl4.Size = new System.Drawing.Size(74, 13);
             this.errorLbl4.TabIndex = 30;
             this.errorLbl4.Text = "Not Distinct";
             this.errorLbl4.Visible = false;
@@ -158,10 +160,9 @@
             // 
             this.errorLbl3.AutoSize = true;
             this.errorLbl3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.errorLbl3.Location = new System.Drawing.Point(708, 521);
-            this.errorLbl3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.errorLbl3.Location = new System.Drawing.Point(354, 271);
             this.errorLbl3.Name = "errorLbl3";
-            this.errorLbl3.Size = new System.Drawing.Size(136, 26);
+            this.errorLbl3.Size = new System.Drawing.Size(74, 13);
             this.errorLbl3.TabIndex = 29;
             this.errorLbl3.Text = "Not Distinct";
             this.errorLbl3.Visible = false;
@@ -170,10 +171,9 @@
             // 
             this.errorLbl2.AutoSize = true;
             this.errorLbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.errorLbl2.Location = new System.Drawing.Point(522, 521);
-            this.errorLbl2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.errorLbl2.Location = new System.Drawing.Point(261, 271);
             this.errorLbl2.Name = "errorLbl2";
-            this.errorLbl2.Size = new System.Drawing.Size(136, 26);
+            this.errorLbl2.Size = new System.Drawing.Size(74, 13);
             this.errorLbl2.TabIndex = 28;
             this.errorLbl2.Text = "Not Distinct";
             this.errorLbl2.Visible = false;
@@ -185,10 +185,9 @@
             this.leftPanel.Controls.Add(this.leftLotteryNumber3);
             this.leftPanel.Controls.Add(this.leftLotteryNumber4);
             this.leftPanel.Controls.Add(this.leftLotteryNumber5);
-            this.leftPanel.Location = new System.Drawing.Point(84, 131);
-            this.leftPanel.Margin = new System.Windows.Forms.Padding(6);
+            this.leftPanel.Location = new System.Drawing.Point(42, 68);
             this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(142, 633);
+            this.leftPanel.Size = new System.Drawing.Size(71, 329);
             this.leftPanel.TabIndex = 27;
             this.leftPanel.Visible = false;
             // 
@@ -196,10 +195,9 @@
             // 
             this.leftLotteryNumber1.AutoSize = true;
             this.leftLotteryNumber1.Font = new System.Drawing.Font("Mistral", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.leftLotteryNumber1.Location = new System.Drawing.Point(6, 0);
-            this.leftLotteryNumber1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.leftLotteryNumber1.Location = new System.Drawing.Point(3, 0);
             this.leftLotteryNumber1.Name = "leftLotteryNumber1";
-            this.leftLotteryNumber1.Size = new System.Drawing.Size(128, 114);
+            this.leftLotteryNumber1.Size = new System.Drawing.Size(66, 57);
             this.leftLotteryNumber1.TabIndex = 14;
             this.leftLotteryNumber1.Tag = 100;
             this.leftLotteryNumber1.Text = "10";
@@ -208,10 +206,9 @@
             // 
             this.leftLotteryNumber2.AutoSize = true;
             this.leftLotteryNumber2.Font = new System.Drawing.Font("Mistral", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.leftLotteryNumber2.Location = new System.Drawing.Point(6, 127);
-            this.leftLotteryNumber2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.leftLotteryNumber2.Location = new System.Drawing.Point(3, 66);
             this.leftLotteryNumber2.Name = "leftLotteryNumber2";
-            this.leftLotteryNumber2.Size = new System.Drawing.Size(128, 114);
+            this.leftLotteryNumber2.Size = new System.Drawing.Size(66, 57);
             this.leftLotteryNumber2.TabIndex = 15;
             this.leftLotteryNumber2.Tag = 100;
             this.leftLotteryNumber2.Text = "10";
@@ -220,10 +217,9 @@
             // 
             this.leftLotteryNumber3.AutoSize = true;
             this.leftLotteryNumber3.Font = new System.Drawing.Font("Mistral", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.leftLotteryNumber3.Location = new System.Drawing.Point(6, 256);
-            this.leftLotteryNumber3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.leftLotteryNumber3.Location = new System.Drawing.Point(3, 133);
             this.leftLotteryNumber3.Name = "leftLotteryNumber3";
-            this.leftLotteryNumber3.Size = new System.Drawing.Size(128, 114);
+            this.leftLotteryNumber3.Size = new System.Drawing.Size(66, 57);
             this.leftLotteryNumber3.TabIndex = 16;
             this.leftLotteryNumber3.Tag = 100;
             this.leftLotteryNumber3.Text = "10";
@@ -232,10 +228,9 @@
             // 
             this.leftLotteryNumber4.AutoSize = true;
             this.leftLotteryNumber4.Font = new System.Drawing.Font("Mistral", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.leftLotteryNumber4.Location = new System.Drawing.Point(6, 388);
-            this.leftLotteryNumber4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.leftLotteryNumber4.Location = new System.Drawing.Point(3, 202);
             this.leftLotteryNumber4.Name = "leftLotteryNumber4";
-            this.leftLotteryNumber4.Size = new System.Drawing.Size(128, 114);
+            this.leftLotteryNumber4.Size = new System.Drawing.Size(66, 57);
             this.leftLotteryNumber4.TabIndex = 17;
             this.leftLotteryNumber4.Tag = 100;
             this.leftLotteryNumber4.Text = "10";
@@ -244,10 +239,9 @@
             // 
             this.leftLotteryNumber5.AutoSize = true;
             this.leftLotteryNumber5.Font = new System.Drawing.Font("Mistral", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.leftLotteryNumber5.Location = new System.Drawing.Point(6, 523);
-            this.leftLotteryNumber5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.leftLotteryNumber5.Location = new System.Drawing.Point(3, 272);
             this.leftLotteryNumber5.Name = "leftLotteryNumber5";
-            this.leftLotteryNumber5.Size = new System.Drawing.Size(128, 114);
+            this.leftLotteryNumber5.Size = new System.Drawing.Size(66, 57);
             this.leftLotteryNumber5.TabIndex = 18;
             this.leftLotteryNumber5.Tag = 100;
             this.leftLotteryNumber5.Text = "10";
@@ -259,10 +253,9 @@
             this.rightPanel.Controls.Add(this.rightLotteryNumber3);
             this.rightPanel.Controls.Add(this.rightLotteryNumber4);
             this.rightPanel.Controls.Add(this.rightLotteryNumber5);
-            this.rightPanel.Location = new System.Drawing.Point(1386, 142);
-            this.rightPanel.Margin = new System.Windows.Forms.Padding(6);
+            this.rightPanel.Location = new System.Drawing.Point(693, 74);
             this.rightPanel.Name = "rightPanel";
-            this.rightPanel.Size = new System.Drawing.Size(142, 633);
+            this.rightPanel.Size = new System.Drawing.Size(71, 329);
             this.rightPanel.TabIndex = 26;
             this.rightPanel.Visible = false;
             // 
@@ -270,10 +263,9 @@
             // 
             this.rightLotteryNumber1.AutoSize = true;
             this.rightLotteryNumber1.Font = new System.Drawing.Font("Mistral", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rightLotteryNumber1.Location = new System.Drawing.Point(6, 0);
-            this.rightLotteryNumber1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.rightLotteryNumber1.Location = new System.Drawing.Point(3, 0);
             this.rightLotteryNumber1.Name = "rightLotteryNumber1";
-            this.rightLotteryNumber1.Size = new System.Drawing.Size(128, 114);
+            this.rightLotteryNumber1.Size = new System.Drawing.Size(66, 57);
             this.rightLotteryNumber1.TabIndex = 14;
             this.rightLotteryNumber1.Tag = 100;
             this.rightLotteryNumber1.Text = "10";
@@ -282,10 +274,9 @@
             // 
             this.rightLotteryNumber2.AutoSize = true;
             this.rightLotteryNumber2.Font = new System.Drawing.Font("Mistral", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rightLotteryNumber2.Location = new System.Drawing.Point(6, 127);
-            this.rightLotteryNumber2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.rightLotteryNumber2.Location = new System.Drawing.Point(3, 66);
             this.rightLotteryNumber2.Name = "rightLotteryNumber2";
-            this.rightLotteryNumber2.Size = new System.Drawing.Size(128, 114);
+            this.rightLotteryNumber2.Size = new System.Drawing.Size(66, 57);
             this.rightLotteryNumber2.TabIndex = 15;
             this.rightLotteryNumber2.Tag = 100;
             this.rightLotteryNumber2.Text = "10";
@@ -294,10 +285,9 @@
             // 
             this.rightLotteryNumber3.AutoSize = true;
             this.rightLotteryNumber3.Font = new System.Drawing.Font("Mistral", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rightLotteryNumber3.Location = new System.Drawing.Point(6, 256);
-            this.rightLotteryNumber3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.rightLotteryNumber3.Location = new System.Drawing.Point(3, 133);
             this.rightLotteryNumber3.Name = "rightLotteryNumber3";
-            this.rightLotteryNumber3.Size = new System.Drawing.Size(128, 114);
+            this.rightLotteryNumber3.Size = new System.Drawing.Size(66, 57);
             this.rightLotteryNumber3.TabIndex = 16;
             this.rightLotteryNumber3.Tag = 100;
             this.rightLotteryNumber3.Text = "10";
@@ -306,10 +296,9 @@
             // 
             this.rightLotteryNumber4.AutoSize = true;
             this.rightLotteryNumber4.Font = new System.Drawing.Font("Mistral", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rightLotteryNumber4.Location = new System.Drawing.Point(6, 388);
-            this.rightLotteryNumber4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.rightLotteryNumber4.Location = new System.Drawing.Point(3, 202);
             this.rightLotteryNumber4.Name = "rightLotteryNumber4";
-            this.rightLotteryNumber4.Size = new System.Drawing.Size(128, 114);
+            this.rightLotteryNumber4.Size = new System.Drawing.Size(66, 57);
             this.rightLotteryNumber4.TabIndex = 17;
             this.rightLotteryNumber4.Tag = 100;
             this.rightLotteryNumber4.Text = "10";
@@ -318,10 +307,9 @@
             // 
             this.rightLotteryNumber5.AutoSize = true;
             this.rightLotteryNumber5.Font = new System.Drawing.Font("Mistral", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rightLotteryNumber5.Location = new System.Drawing.Point(6, 523);
-            this.rightLotteryNumber5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.rightLotteryNumber5.Location = new System.Drawing.Point(3, 272);
             this.rightLotteryNumber5.Name = "rightLotteryNumber5";
-            this.rightLotteryNumber5.Size = new System.Drawing.Size(128, 114);
+            this.rightLotteryNumber5.Size = new System.Drawing.Size(66, 57);
             this.rightLotteryNumber5.TabIndex = 18;
             this.rightLotteryNumber5.Tag = 100;
             this.rightLotteryNumber5.Text = "10";
@@ -330,10 +318,9 @@
             // 
             this.WinLoseLbl.AutoSize = true;
             this.WinLoseLbl.Font = new System.Drawing.Font("Mistral", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WinLoseLbl.Location = new System.Drawing.Point(616, 323);
-            this.WinLoseLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.WinLoseLbl.Location = new System.Drawing.Point(308, 168);
             this.WinLoseLbl.Name = "WinLoseLbl";
-            this.WinLoseLbl.Size = new System.Drawing.Size(346, 114);
+            this.WinLoseLbl.Size = new System.Drawing.Size(178, 57);
             this.WinLoseLbl.TabIndex = 25;
             this.WinLoseLbl.Tag = 100;
             this.WinLoseLbl.Text = "You Win!";
@@ -344,10 +331,9 @@
             this.lotteryLbl1.AutoSize = true;
             this.lotteryLbl1.BackColor = System.Drawing.Color.Transparent;
             this.lotteryLbl1.Font = new System.Drawing.Font("Mistral", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lotteryLbl1.Location = new System.Drawing.Point(12, 60);
-            this.lotteryLbl1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lotteryLbl1.Location = new System.Drawing.Point(6, 31);
             this.lotteryLbl1.Name = "lotteryLbl1";
-            this.lotteryLbl1.Size = new System.Drawing.Size(330, 69);
+            this.lotteryLbl1.Size = new System.Drawing.Size(163, 34);
             this.lotteryLbl1.TabIndex = 19;
             this.lotteryLbl1.Tag = 100;
             this.lotteryLbl1.Text = "Lottery Numbers";
@@ -357,10 +343,9 @@
             // 
             this.errorLbl1.AutoSize = true;
             this.errorLbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.errorLbl1.Location = new System.Drawing.Point(340, 521);
-            this.errorLbl1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.errorLbl1.Location = new System.Drawing.Point(170, 271);
             this.errorLbl1.Name = "errorLbl1";
-            this.errorLbl1.Size = new System.Drawing.Size(136, 26);
+            this.errorLbl1.Size = new System.Drawing.Size(74, 13);
             this.errorLbl1.TabIndex = 9;
             this.errorLbl1.Text = "Not Distinct";
             this.errorLbl1.Visible = false;
@@ -370,10 +355,9 @@
             this.lotteryLbl2.AutoSize = true;
             this.lotteryLbl2.BackColor = System.Drawing.Color.Transparent;
             this.lotteryLbl2.Font = new System.Drawing.Font("Mistral", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lotteryLbl2.Location = new System.Drawing.Point(1282, 60);
-            this.lotteryLbl2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lotteryLbl2.Location = new System.Drawing.Point(641, 31);
             this.lotteryLbl2.Name = "lotteryLbl2";
-            this.lotteryLbl2.Size = new System.Drawing.Size(330, 69);
+            this.lotteryLbl2.Size = new System.Drawing.Size(163, 34);
             this.lotteryLbl2.TabIndex = 8;
             this.lotteryLbl2.Tag = 100;
             this.lotteryLbl2.Text = "Lottery Numbers";
@@ -382,24 +366,23 @@
             // PlayBtn
             // 
             this.PlayBtn.BackColor = System.Drawing.Color.Crimson;
-            this.PlayBtn.Font = new System.Drawing.Font("MV Boli", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlayBtn.Location = new System.Drawing.Point(332, 563);
-            this.PlayBtn.Margin = new System.Windows.Forms.Padding(6);
+            this.PlayBtn.Font = new System.Drawing.Font("MV Boli", 60F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlayBtn.Location = new System.Drawing.Point(166, 293);
             this.PlayBtn.Name = "PlayBtn";
-            this.PlayBtn.Size = new System.Drawing.Size(910, 250);
+            this.PlayBtn.Size = new System.Drawing.Size(455, 130);
             this.PlayBtn.TabIndex = 0;
             this.PlayBtn.Text = "Play";
             this.PlayBtn.UseVisualStyleBackColor = false;
+            this.PlayBtn.Click += new System.EventHandler(this.PlayBtn_Click);
             // 
             // lotteryGmaeLbl
             // 
             this.lotteryGmaeLbl.AutoSize = true;
             this.lotteryGmaeLbl.BackColor = System.Drawing.Color.Transparent;
             this.lotteryGmaeLbl.Font = new System.Drawing.Font("Mistral", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lotteryGmaeLbl.Location = new System.Drawing.Point(286, 125);
-            this.lotteryGmaeLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lotteryGmaeLbl.Location = new System.Drawing.Point(143, 65);
             this.lotteryGmaeLbl.Name = "lotteryGmaeLbl";
-            this.lotteryGmaeLbl.Size = new System.Drawing.Size(1029, 229);
+            this.lotteryGmaeLbl.Size = new System.Drawing.Size(515, 114);
             this.lotteryGmaeLbl.TabIndex = 6;
             this.lotteryGmaeLbl.Tag = 100;
             this.lotteryGmaeLbl.Text = "LOTTERY GAME";
@@ -409,10 +392,9 @@
             this.InfoLbl.AutoSize = true;
             this.InfoLbl.BackColor = System.Drawing.Color.Transparent;
             this.InfoLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoLbl.Location = new System.Drawing.Point(234, 344);
-            this.InfoLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.InfoLbl.Location = new System.Drawing.Point(94, 177);
             this.InfoLbl.Name = "InfoLbl";
-            this.InfoLbl.Size = new System.Drawing.Size(1145, 37);
+            this.InfoLbl.Size = new System.Drawing.Size(603, 20);
             this.InfoLbl.TabIndex = 5;
             this.InfoLbl.Text = "Select or Enter Five Distinct Numbers In The Range Of One Through Forty";
             this.InfoLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -421,8 +403,7 @@
             // 
             this.userNumber5.BackColor = System.Drawing.Color.Crimson;
             this.userNumber5.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userNumber5.Location = new System.Drawing.Point(1092, 438);
-            this.userNumber5.Margin = new System.Windows.Forms.Padding(6);
+            this.userNumber5.Location = new System.Drawing.Point(546, 228);
             this.userNumber5.Maximum = new decimal(new int[] {
             40,
             0,
@@ -434,7 +415,7 @@
             0,
             0});
             this.userNumber5.Name = "userNumber5";
-            this.userNumber5.Size = new System.Drawing.Size(150, 73);
+            this.userNumber5.Size = new System.Drawing.Size(75, 40);
             this.userNumber5.TabIndex = 4;
             this.userNumber5.Tag = 4;
             this.userNumber5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -443,13 +424,13 @@
             0,
             0,
             0});
+            this.userNumber5.ValueChanged += new System.EventHandler(this.UserNumber_ValueChanged);
             // 
             // userNumber4
             // 
             this.userNumber4.BackColor = System.Drawing.Color.Yellow;
             this.userNumber4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userNumber4.Location = new System.Drawing.Point(902, 438);
-            this.userNumber4.Margin = new System.Windows.Forms.Padding(6);
+            this.userNumber4.Location = new System.Drawing.Point(451, 228);
             this.userNumber4.Maximum = new decimal(new int[] {
             40,
             0,
@@ -461,7 +442,7 @@
             0,
             0});
             this.userNumber4.Name = "userNumber4";
-            this.userNumber4.Size = new System.Drawing.Size(150, 73);
+            this.userNumber4.Size = new System.Drawing.Size(75, 40);
             this.userNumber4.TabIndex = 3;
             this.userNumber4.Tag = 3;
             this.userNumber4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -470,13 +451,13 @@
             0,
             0,
             0});
+            this.userNumber4.ValueChanged += new System.EventHandler(this.UserNumber_ValueChanged);
             // 
             // userNumber3
             // 
             this.userNumber3.BackColor = System.Drawing.Color.Crimson;
             this.userNumber3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userNumber3.Location = new System.Drawing.Point(714, 438);
-            this.userNumber3.Margin = new System.Windows.Forms.Padding(6);
+            this.userNumber3.Location = new System.Drawing.Point(357, 228);
             this.userNumber3.Maximum = new decimal(new int[] {
             40,
             0,
@@ -488,7 +469,7 @@
             0,
             0});
             this.userNumber3.Name = "userNumber3";
-            this.userNumber3.Size = new System.Drawing.Size(150, 73);
+            this.userNumber3.Size = new System.Drawing.Size(75, 40);
             this.userNumber3.TabIndex = 2;
             this.userNumber3.Tag = 2;
             this.userNumber3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -497,13 +478,13 @@
             0,
             0,
             0});
+            this.userNumber3.ValueChanged += new System.EventHandler(this.UserNumber_ValueChanged);
             // 
             // userNumber2
             // 
             this.userNumber2.BackColor = System.Drawing.Color.Yellow;
             this.userNumber2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userNumber2.Location = new System.Drawing.Point(520, 438);
-            this.userNumber2.Margin = new System.Windows.Forms.Padding(6);
+            this.userNumber2.Location = new System.Drawing.Point(260, 228);
             this.userNumber2.Maximum = new decimal(new int[] {
             40,
             0,
@@ -515,7 +496,7 @@
             0,
             0});
             this.userNumber2.Name = "userNumber2";
-            this.userNumber2.Size = new System.Drawing.Size(150, 73);
+            this.userNumber2.Size = new System.Drawing.Size(75, 40);
             this.userNumber2.TabIndex = 1;
             this.userNumber2.Tag = 1;
             this.userNumber2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -524,13 +505,13 @@
             0,
             0,
             0});
+            this.userNumber2.ValueChanged += new System.EventHandler(this.UserNumber_ValueChanged);
             // 
             // userNumber1
             // 
             this.userNumber1.BackColor = System.Drawing.Color.Crimson;
             this.userNumber1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userNumber1.Location = new System.Drawing.Point(338, 438);
-            this.userNumber1.Margin = new System.Windows.Forms.Padding(6);
+            this.userNumber1.Location = new System.Drawing.Point(169, 228);
             this.userNumber1.Maximum = new decimal(new int[] {
             40,
             0,
@@ -542,7 +523,7 @@
             0,
             0});
             this.userNumber1.Name = "userNumber1";
-            this.userNumber1.Size = new System.Drawing.Size(150, 73);
+            this.userNumber1.Size = new System.Drawing.Size(75, 40);
             this.userNumber1.TabIndex = 0;
             this.userNumber1.Tag = 0;
             this.userNumber1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -551,15 +532,15 @@
             0,
             0,
             0});
+            this.userNumber1.ValueChanged += new System.EventHandler(this.UserNumber_ValueChanged);
             // 
             // LotteryGameForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1600, 865);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gradientGroup1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "LotteryGameForm";
             this.ShowIcon = false;
             this.Text = "Lottery Game";
@@ -596,11 +577,17 @@
             lotteryNumberLbls.Add(rightLotteryNumber3);
             lotteryNumberLbls.Add(rightLotteryNumber4);
             lotteryNumberLbls.Add(rightLotteryNumber5);
+
+            upAndDowns.Add(userNumber1);
+            upAndDowns.Add(userNumber2);
+            upAndDowns.Add(userNumber3);
+            upAndDowns.Add(userNumber4);
+            upAndDowns.Add(userNumber5);
         }
 
         #endregion
 
-        private FileSizes.GradientGroup gradientGroup1;
+        private LotteryGame.GradientGroup gradientGroup1;
         private System.Windows.Forms.NumericUpDown userNumber1;
         private System.Windows.Forms.Button PlayBtn;
         private System.Windows.Forms.Label lotteryGmaeLbl;
